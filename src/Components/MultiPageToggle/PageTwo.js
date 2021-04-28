@@ -1,13 +1,7 @@
-import React from 'react'
+import React from "react";
 
-function PageTwo({mutToogle, setMutToogle}) {
-  return (
-    <div>
-     {
-       mutToogle ?  <h1>Hi This is page Two</h1> : null
-     }
-    </div>
-  )
+function PageTwo({ justclick, setJustClick }) {
+  return <div>{justclick ? <h1>This is page two</h1> : null}</div>;
 }
 
-export default PageTwo
+export default PageTwo;

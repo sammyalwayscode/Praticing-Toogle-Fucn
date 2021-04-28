@@ -1,22 +1,18 @@
-import React, { useState } from 'react'
-import PageTwo from './PageTwo'
+import React, { useState } from "react";
+import PageTwo from "./PageTwo";
 
 function PageOne() {
-  const [mutToogle, setMutToogle] = useState(false)
+  const [justclick, setJustClick] = useState(false);
 
-
-  console.log(mutToogle)
-const justClick = (e) => {
-  setMutToogle(!mutToogle)
-}
-
+  const clickPage = () => {
+    setJustClick(!justclick);
+  };
   return (
     <div>
-      <h1 onClick={justClick}>Hello This Is Page One</h1>
-
-      <PageTwo mutToogle={mutToogle} setMutToogle={setMutToogle} />
+      <h1 onClick={clickPage}>This is page one</h1>
+      <PageTwo justclick={justclick} setJustClick={setJustClick} />
     </div>
-  )
+  );
 }
 
-export default PageOne
+export default PageOne;
