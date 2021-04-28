@@ -1,24 +1,22 @@
-import React,{useState} from 'react'
+import React, { useState } from "react";
 
 function Click() {
+  const [click, setClick] = useState(false);
 
-  const [toogle, setToggle]=useState(false)
-
-console.log(toogle)
-
- const clickTog = (e) => {
-    setToggle(!toogle)
-  }
-
+  const clicking = () => {
+    setClick(!click);
+  };
   return (
     <div>
-      <button onClick={clickTog}>Click ME Now</button>
+      {/* <h1 onClick={clicking}>Start</h1> */}
 
-      {
-        toogle?<h1>God Is Good</h1>: null
-      }
+      {click ? (
+        <h1 onClick={clicking}>Start</h1>
+      ) : (
+        <h1 onClick={clicking}>Stop</h1>
+      )}
     </div>
-  )
+  );
 }
 
-export default Click
+export default Click;
